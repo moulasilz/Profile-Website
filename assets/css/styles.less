@@ -1,0 +1,66 @@
+@banner-height :200px;
+html,
+body {
+    height: 100%;
+}
+
+body>div {
+    background-color: aliceblue;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .phone {
+        width: 100% !important;
+    }
+}
+
+.phone {
+    margin-top: 1%;
+    height: 96%;
+    width: 768px;
+    position: relative;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    display: block;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.container {
+    margin-top: 1rem;
+    position: relative;
+    .banner {
+        margin-bottom: calc(@banner-height/2);
+        img {
+            min-width: 100%;
+            height: @banner-height;
+
+        }
+
+    }
+
+    .avatar {
+        position: absolute;
+        top: calc(@banner-height/2);
+        width: calc(100% - var(--bs-gutter-x));
+        div {
+            border: 6px solid white;
+            width:@banner-height;
+            height: @banner-height;
+            
+        }
+    }
+    .label-name{
+        
+        padding-top: calc(var(--bs-body-font-size)/2);
+    }
+}
