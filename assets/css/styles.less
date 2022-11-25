@@ -21,8 +21,15 @@ body>div {
 @media only screen and (max-width: 768px) {
     .phone {
         width: 100% !important;
-        border-radius: 0!important;
+        border-radius: 0 !important;
+
+        .public-information {
+            ul {
+                padding-left: 1rem;
+            }
+        }
     }
+
 }
 
 .phone {
@@ -63,6 +70,7 @@ body>div {
             background-image: url('../media/img/1500x500.jfif');
             background-size: cover;
             background-position: center;
+
             img {
                 display: none;
                 min-width: 100%;
@@ -111,8 +119,11 @@ body>div {
 
     &.public-information {
         ul {
+
             li {
-                padding-top: calc(var(--bs-body-font-size)/2);;
+                padding-top: calc(var(--bs-body-font-size)/2);
+                ;
+
                 .icon {
                     width: 1rem;
                     margin-left: calc(var(--bs-body-font-size)/1.5);
@@ -128,4 +139,3 @@ body>div {
     height: 1rem;
     background-color: var(--bs-gray-400);
 }
-
